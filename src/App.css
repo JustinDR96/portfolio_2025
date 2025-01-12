@@ -1,0 +1,84 @@
+/* Styles globaux */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #0a1123 0%, #141b2d 100%);
+}
+
+main {
+  flex: 1;
+}
+
+/* Animation pour les effets néon */
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan),
+      0 0 30px var(--accent-cyan);
+  }
+  50% {
+    text-shadow: 0 0 15px var(--accent-cyan), 0 0 25px var(--accent-cyan),
+      0 0 35px var(--accent-cyan);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan),
+      0 0 30px var(--accent-cyan);
+  }
+}
+
+/* Classes utilitaires */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--accent-green);
+  color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(195, 255, 55, 0.3);
+}
+
+/* Effets de texte */
+.neon-text {
+  animation: neonPulse 2s infinite;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

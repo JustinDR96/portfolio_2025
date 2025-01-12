@@ -1,0 +1,159 @@
+.hero {
+  padding-top: 120px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    to right,
+    var(--accent-blue),
+    var(--accent-purple)
+  );
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--accent-blue);
+}
+
+.about-content h2 {
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-secondary {
+  background: var(--accent-blue);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    to right,
+    var(--accent-blue),
+    var(--accent-purple)
+  );
+  color: white;
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background: transparent;
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.btn-outline:hover {
+  background: linear-gradient(
+    to right,
+    var(--accent-blue),
+    var(--accent-purple)
+  );
+  color: white;
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+.about-content .section-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.about-content .header-line {
+  margin: 0 0 2rem 0;
+}
+
+.btn-primary:hover,
+.btn-outline:hover,
+.btn-primary:focus,
+.btn-outline:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+.btn-primary:focus-visible,
+.btn-outline:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
