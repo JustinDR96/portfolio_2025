@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ProjectDetails.css";
+import Fake_preview from "/projects/fake.jpg";
 
 export const ProjectDetails = () => {
   const { id } = useParams();
@@ -10,7 +11,7 @@ export const ProjectDetails = () => {
     "game-store": {
       title: "Site de vente de jeux vidéo",
       category: "E-commerce",
-      image: "/path-to-game-store-image.jpg",
+      image: Fake_preview,
       description:
         "Plateforme e-commerce avec navigation fluide et design épuré. Cette plateforme permet aux utilisateurs de parcourir, rechercher et acheter des jeux vidéo en ligne. Le site dispose d'un système de filtrage avancé, d'un panier d'achat dynamique et d'une interface utilisateur intuitive.",
       longDescription: [

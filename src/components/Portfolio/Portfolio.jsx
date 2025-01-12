@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Portfolio.css";
+import Fake_preview from "/projects/fake.jpg";
 
 export const Portfolio = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export const Portfolio = () => {
       id: "game-store",
       title: "Site de vente de jeux vidéo",
       category: "E-commerce",
-      image: "/path-to-game-store-image.jpg",
+      image: Fake_preview,
       description:
         "Plateforme e-commerce avec navigation fluide et design épuré.",
     },
@@ -18,7 +19,7 @@ export const Portfolio = () => {
       id: "cinema",
       title: "Site pour un cinéma",
       category: "Site Vitrine",
-      image: "/path-to-cinema-image.jpg",
+      image: Fake_preview,
       description:
         "Présentation d'événements et films avec système de réservation simple.",
     },
@@ -26,14 +27,14 @@ export const Portfolio = () => {
       id: 3,
       title: "Site pour un restaurant",
       category: "Site Vitrine",
-      image: "/path-to-restaurant-image.jpg",
+      image: Fake_preview,
       description: "Design moderne pour mettre en valeur menus et services.",
     },
     {
       id: 4,
       title: "Projet TCG Pocket",
       category: "Application Web",
-      image: "/path-to-tcg-image.jpg",
+      image: Fake_preview,
       description: "Interactivité et logique captivante d'ouverture de cartes.",
     },
   ];
