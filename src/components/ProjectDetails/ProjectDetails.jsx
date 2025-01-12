@@ -2,6 +2,14 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ProjectDetails.css";
 import Fake_preview from "/projects/fake.jpg";
+import Game_preview from "/projects/mobile.png";
+import Flexflix from "/projects/flexflix.png";
+import GSAP from "/projects/gsap.png";
+import gsap_icon from "/icons/gsap_icon.png";
+import sushi_masta from "/projects/sushi_masta.png";
+import sass_icon from "/icons/sass.svg";
+import vite_icon from "/icons/vite.svg";
+import tmdb_icon from "/icons/tmdb.svg";
 
 export const ProjectDetails = () => {
   const { id } = useParams();
@@ -9,53 +17,123 @@ export const ProjectDetails = () => {
 
   const projectsData = {
     "game-store": {
-      title: "Site de vente de jeux vidéo",
-      category: "E-commerce",
+      title: "GameCenter",
+      category: "E-commerce / Gaming",
+      image: Game_preview,
+      description:
+        "Une plateforme moderne de vente de jeux vidéo inspirée des plus grandes références du marché. Interface intuitive permettant aux utilisateurs de découvrir, rechercher et acheter leurs jeux préférés.",
+      longDescription: [
+        "Catalogue complet avec système de filtrage par genre, plateforme et prix",
+        "Interface utilisateur moderne avec thème sombre et animations fluides",
+        "Système de recherche instantanée des jeux",
+        "Panier d'achat dynamique avec gestion des quantités",
+        "Authentification utilisateur sécurisée",
+        "Responsive design pour une expérience optimale sur tous les appareils",
+      ],
+      technologies: [
+        { name: "React", icon: "react.svg" },
+        { name: "Vite", icon: "vite.svg" },
+        { name: "Sass", icon: "sass.svg" },
+        { name: "IGDB API", icon: "igdb.svg" },
+      ],
+      links: {
+        demo: "https://gamecenter96.vercel.app/",
+        github: "https://github.com/JustinDR96/IGDB",
+      },
+    },
+    cinema: {
+      title: "FlexFlix Cinéma",
+      category: "Site Vitrine / Divertissement",
+      image: Flexflix,
+      description:
+        "Une plateforme moderne dédiée au cinéma, permettant aux utilisateurs de découvrir les dernières sorties, réserver leurs places et suivre l'actualité cinématographique.",
+      longDescription: [
+        "Catalogue des films à l'affiche et à venir",
+        "Système de réservation de billets en ligne",
+        "Interface utilisateur intuitive et responsive",
+        "Actualités et critiques de films",
+        "Programme des séances en temps réel",
+      ],
+      technologies: [
+        { name: "React", icon: "react.svg" },
+        { name: "CSS", icon: "css.svg" },
+        { name: "Vite", icon: "vite.svg" },
+        { name: "TMDB API", icon: "tmdb.svg" },
+      ],
+      links: {
+        demo: "https://flexflix-demo.vercel.app",
+        github: "https://github.com/username/flexflix",
+      },
+    },
+    3: {
+      title: "Restaurant Gourmet",
+      category: "Site Vitrine / Restauration",
+      image: sushi_masta,
+      description:
+        "Site vitrine élégant pour un restaurant gastronomique, mettant en valeur les plats et l'ambiance unique de l'établissement.",
+      longDescription: [
+        "Présentation interactive du menu",
+        "Galerie photo des plats et de l'établissement",
+      ],
+      technologies: [
+        { name: "React", icon: "react.svg" },
+        { name: "Vite", icon: "vite.svg" },
+        { name: "Tailwind", icon: "tailwind.svg" },
+      ],
+      links: {
+        demo: "https://sushi-master-phi.vercel.app/",
+        github: "https://github.com/username/restaurant",
+      },
+    },
+    4: {
+      title: "TCG Pocket",
+      category: "Application Web / Gaming",
       image: Fake_preview,
       description:
-        "Plateforme e-commerce avec navigation fluide et design épuré. Cette plateforme permet aux utilisateurs de parcourir, rechercher et acheter des jeux vidéo en ligne. Le site dispose d'un système de filtrage avancé, d'un panier d'achat dynamique et d'une interface utilisateur intuitive.",
+        "Application web interactive permettant aux collectionneurs de cartes à jouer de gérer leur collection et de simuler l'ouverture de boosters.",
       longDescription: [
-        "Interface utilisateur moderne et responsive",
-        "Système de recherche et filtrage avancé",
-        "Panier d'achat en temps réel",
-        "Système de paiement sécurisé",
-        "Gestion des stocks en temps réel",
+        "Système d'authentification utilisateur",
+        "Simulation réaliste d'ouverture de boosters",
+        "Gestion de collection personnelle",
+        "Système d'échange entre utilisateurs",
+        "Statistiques détaillées de collection",
       ],
       technologies: [
         { name: "React", icon: "react.svg" },
         { name: "Node.js", icon: "nodejs.svg" },
-        { name: "MongoDB", icon: "mongodb.svg" },
-        { name: "Stripe", icon: "stripe.svg" },
+        { name: "Vite", icon: "vite.svg" },
+        { name: "Supabase", icon: "supabase.svg" },
       ],
       links: {
-        demo: "https://game-store-demo.com",
-        github: "https://github.com/username/game-store",
+        demo: "https://tcg-pocket.vercel.app",
+        github: "https://github.com/JustinDR96/tcg-pocket",
       },
     },
-    cinema: {
-      title: "Site pour un cinéma",
-      category: "Site Vitrine",
-      image: "/path-to-cinema-image.jpg",
+    "gsap-react": {
+      title: "Site vitrine d'animation",
+      category: "Animation",
+      image: GSAP,
       description:
-        "Présentation d'événements et films avec système de réservation simple. Le site permet aux visiteurs de consulter les horaires des séances, réserver leurs places et s'informer sur les événements à venir.",
+        "Portfolio interactif utilisant GSAP pour créer des animations fluides et modernes, offrant une expérience utilisateur unique et engageante.",
       longDescription: [
-        "Système de réservation en ligne",
-        "Calendrier des séances interactif",
-        "Section actualités et événements",
-        "Interface d'administration pour la gestion des films",
-        "Système de newsletter",
+        "Animations sophistiquées avec GSAP et ScrollTrigger",
+        "Transitions fluides entre les sections",
+        "Interface utilisateur moderne et interactive",
+        "Effets de parallaxe et animations au scroll",
+        "Design responsive avec animations adaptatives",
+        "Optimisation des performances pour une expérience fluide",
       ],
       technologies: [
-        { name: "Next.js", icon: "nextjs.svg" },
-        { name: "Supabase", icon: "supabase.svg" },
-        { name: "Tailwind CSS", icon: "tailwind.svg" },
+        { name: "React", icon: "react.svg" },
+        { name: "GSAP", icon: gsap_icon },
+        { name: "Vite", icon: "vite.svg" },
+        { name: "CSS", icon: "css.svg" },
       ],
       links: {
-        demo: "https://cinema-demo.com",
-        github: "https://github.com/username/cinema",
+        demo: "https://gsap-react-eta.vercel.app/",
+        github: "https://github.com/JustinDR96/gsap-react",
       },
     },
-    // Ajoutez les autres projets de la même manière
   };
 
   const project = projectsData[id];

@@ -2,6 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Portfolio.css";
 import Fake_preview from "/projects/fake.jpg";
+import Game_preview from "/projects/mobile.png";
+import Flexflix from "/projects/flexflix.png";
+import GSAP from "/projects/gsap.png";
+import sushi_masta from "/projects/sushi_masta.png";
 
 export const Portfolio = () => {
   const navigate = useNavigate();
@@ -11,7 +15,7 @@ export const Portfolio = () => {
       id: "game-store",
       title: "Site de vente de jeux vidéo",
       category: "E-commerce",
-      image: Fake_preview,
+      image: Game_preview,
       description:
         "Plateforme e-commerce avec navigation fluide et design épuré.",
     },
@@ -19,7 +23,7 @@ export const Portfolio = () => {
       id: "cinema",
       title: "Site pour un cinéma",
       category: "Site Vitrine",
-      image: Fake_preview,
+      image: Flexflix,
       description:
         "Présentation d'événements et films avec système de réservation simple.",
     },
@@ -27,7 +31,7 @@ export const Portfolio = () => {
       id: 3,
       title: "Site pour un restaurant",
       category: "Site Vitrine",
-      image: Fake_preview,
+      image: sushi_masta,
       description: "Design moderne pour mettre en valeur menus et services.",
     },
     {
@@ -36,6 +40,13 @@ export const Portfolio = () => {
       category: "Application Web",
       image: Fake_preview,
       description: "Interactivité et logique captivante d'ouverture de cartes.",
+    },
+    {
+      id: "gsap-react",
+      title: "Site vitrine d'animation",
+      category: "Animation",
+      image: GSAP,
+      description: "Portfolio interactif avec animations GSAP sophistiquées.",
     },
   ];
 
