@@ -1,19 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 
 export const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false); // Ferme le menu après le clic
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header
+      className={`header ${scrolled ? "scrolled" : ""} ${
+        isMenuOpen ? "menu-open" : ""
+      }`}
+    >
       <div className="container header-content">
         <div className="logo">JD</div>
-        <nav>
+
+        <button
+          className={`hamburger ${isMenuOpen ? "active" : ""}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav className={isMenuOpen ? "active" : ""}>
           <ul>
             <li>
               <a href="#hero" onClick={() => scrollToSection("hero")}>

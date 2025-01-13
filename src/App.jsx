@@ -8,12 +8,14 @@ import { Experience } from "./components/Experience/Experience";
 import { Contact } from "./components/Contact/Contact";
 import { Footer } from "./components/Footer/Footer";
 import { ProjectDetails } from "./components/ProjectDetails/ProjectDetails";
+import { ScrollToTop } from "./components/ScrollToTop/ScrollToTop";
 import "./App.css";
 
 function App() {
   return (
     <Router>
       <div className="app">
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route
