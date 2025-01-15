@@ -6,7 +6,7 @@ import Game_preview from "/projects/mobile.png";
 import Flexflix from "/projects/flexflix.png";
 import GSAP from "/projects/gsap.png";
 import gsap_icon from "/icons/gsap_icon.png";
-import sushi_masta from "/projects/sushi_masta.png";
+import legourmet from "/projects/legourmet.png";
 import sass_icon from "/icons/sass.svg";
 import vite_icon from "/icons/vite.svg";
 import tmdb_icon from "/icons/tmdb.svg";
@@ -16,32 +16,30 @@ export const ProjectDetails = () => {
   const navigate = useNavigate();
 
   const projectsData = {
-    "game-store": {
-      title: "GameCenter",
-      category: "E-commerce / Gaming",
+    gameCenter: {
+      title: "Game Center",
+      category: "Site E-commerce / Gaming",
       image: Game_preview,
       description:
-        "Une plateforme moderne de vente de jeux vidéo inspirée des plus grandes références du marché. Interface intuitive permettant aux utilisateurs de découvrir, rechercher et acheter leurs jeux préférés.",
+        "Site e-commerce dédié aux jeux vidéo, offrant une expérience utilisateur fluide et moderne pour découvrir et acheter les derniers jeux.",
       longDescription: [
-        "Catalogue complet avec système de filtrage par genre, plateforme et prix",
-        "Interface utilisateur moderne avec thème sombre et animations fluides",
-        "Système de recherche instantanée des jeux",
-        "Panier d'achat dynamique avec gestion des quantités",
-        "Authentification utilisateur sécurisée",
-        "Responsive design pour une expérience optimale sur tous les appareils",
+        "Catalogue interactif de jeux vidéo avec des filtres avancés.",
+        "Pages produit détaillées présentant les caractéristiques des jeux.",
+        "Panier d’achat et système de commande intégrés.",
+        "Design immersif et responsive, optimisé pour les gamers.",
       ],
       technologies: [
         { name: "React", icon: "react.svg" },
         { name: "Vite", icon: "vite.svg" },
-        { name: "Sass", icon: "sass.svg" },
-        { name: "IGDB API", icon: "igdb.svg" },
+        { name: "Tailwind", icon: "tailwind.svg" },
+        { name: "Firebase", icon: "firebase.svg" },
       ],
       links: {
         demo: "https://gamecenter96.vercel.app/",
-        github: "https://github.com/JustinDR96/IGDB",
+        github: "https://github.com/JustinDR96/game_center",
       },
     },
-    cinema: {
+    Flexflix: {
       title: "FlexFlix Cinéma",
       category: "Site Vitrine / Divertissement",
       image: Flexflix,
@@ -65,15 +63,17 @@ export const ProjectDetails = () => {
         github: "https://github.com/username/flexflix",
       },
     },
-    3: {
-      title: "Restaurant Gourmet",
+    legourmet: {
+      title: "Restaurant Le Gourmet",
       category: "Site Vitrine / Restauration",
-      image: sushi_masta,
+      image: legourmet,
       description:
         "Site vitrine élégant pour un restaurant gastronomique, mettant en valeur les plats et l'ambiance unique de l'établissement.",
       longDescription: [
-        "Présentation interactive du menu",
-        "Galerie photo des plats et de l'établissement",
+        "Une présentation interactive du menu pour séduire les clients.",
+        "Une galerie photo mettant en avant la qualité des plats et l’atmosphère du restaurant.",
+        "Un système de réservation intégré et facile d'utilisation.",
+        "Un design moderne, épuré et entièrement responsive pour une expérience optimale sur tous les appareils.",
       ],
       technologies: [
         { name: "React", icon: "react.svg" },
@@ -81,11 +81,12 @@ export const ProjectDetails = () => {
         { name: "Tailwind", icon: "tailwind.svg" },
       ],
       links: {
-        demo: "https://sushi-master-phi.vercel.app/",
-        github: "https://github.com/username/restaurant",
+        demo: "https://le-gourmet.vercel.app/",
+        github: "https://github.com/JustinDR96/le_gourmet",
       },
     },
-    4: {
+
+    "tcg-pocket-clone": {
       title: "TCG Pocket",
       category: "Application Web / Gaming",
       image: Fake_preview,
@@ -110,24 +111,22 @@ export const ProjectDetails = () => {
       },
     },
     "gsap-react": {
-      title: "Site vitrine d'animation",
-      category: "Animation",
+      title: "GSAP Animations Showcase",
+      category: "Site de Démonstration / Animations",
       image: GSAP,
       description:
-        "Portfolio interactif utilisant GSAP pour créer des animations fluides et modernes, offrant une expérience utilisateur unique et engageante.",
+        "Site de démonstration interactif mettant en valeur les animations fluides et dynamiques réalisées avec GSAP et React.",
       longDescription: [
-        "Animations sophistiquées avec GSAP et ScrollTrigger",
-        "Transitions fluides entre les sections",
-        "Interface utilisateur moderne et interactive",
-        "Effets de parallaxe et animations au scroll",
-        "Design responsive avec animations adaptatives",
-        "Optimisation des performances pour une expérience fluide",
+        "Présentation d'animations créatives et immersives.",
+        "Transitions fluides entre les sections pour une expérience utilisateur engageante.",
+        "Exemples interactifs pour explorer les capacités de GSAP.",
+        "Design responsive adapté aux écrans mobiles et desktops.",
       ],
       technologies: [
         { name: "React", icon: "react.svg" },
-        { name: "GSAP", icon: gsap_icon },
+        { name: "GSAP", icon: "gsap.svg" },
         { name: "Vite", icon: "vite.svg" },
-        { name: "CSS", icon: "css.svg" },
+        { name: "Tailwind", icon: "tailwind.svg" },
       ],
       links: {
         demo: "https://gsap-react-eta.vercel.app/",
