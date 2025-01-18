@@ -12,7 +12,6 @@ export const Experience = () => {
         { name: "JavaScript", icon: "/icons/javascript.svg" },
         { name: "React", icon: "/icons/react.svg" },
         { name: "Next.js", icon: "/icons/nextjs.svg" },
-        { name: "PHP", icon: "/icons/php.svg" },
       ],
     },
     {

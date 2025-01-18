@@ -145,20 +145,66 @@
   transition: var(--transition);
 }
 
-.tech-item:hover {
-  transform: translateY(-3px);
-}
-
 .tech-item img {
   width: 40px;
   height: 40px;
   object-fit: contain;
+  filter: none;
+}
+
+.tech-item[data-tech="html"] img {
+  filter: none;
+}
+
+.tech-item[data-tech="css"] img {
+  filter: none;
+}
+
+.tech-item[data-tech="javascript"] img {
+  filter: none;
+}
+
+.tech-item[data-tech="react"] img {
+  filter: none;
+}
+
+.tech-item[data-tech="nextjs"] img {
+  filter: brightness(0.8);
+}
+
+.tech-item[data-tech="mongodb"] img {
+  filter: none;
+}
+
+.tech-item[data-tech="firebase"] img {
+  filter: none;
+}
+
+.tech-item[data-tech="supabase"] img {
+  filter: none;
+}
+
+.tech-item[data-tech="git"] img {
+  filter: none;
+}
+
+.tech-item[data-tech="github"] img {
+  filter: brightness(0.8);
+}
+
+.tech-item[data-tech="figma"] img {
+  filter: none;
 }
 
 .tech-item span {
   color: var(--text-secondary);
   font-size: 0.9rem;
   text-align: center;
+}
+
+.tech-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 992px) {

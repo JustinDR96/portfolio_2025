@@ -10,6 +10,7 @@ import legourmet from "/projects/legourmet.png";
 import sass_icon from "/icons/sass.svg";
 import vite_icon from "/icons/vite.svg";
 import tmdb_icon from "/icons/tmdb.svg";
+import igdb_icon from "/icons/igdb.svg";
 
 export const ProjectDetails = () => {
   const { id } = useParams();
@@ -21,22 +22,24 @@ export const ProjectDetails = () => {
       category: "Site E-commerce / Gaming",
       image: Game_preview,
       description:
-        "Site e-commerce dédié aux jeux vidéo, offrant une expérience utilisateur fluide et moderne pour découvrir et acheter les derniers jeux.",
+        "Une plateforme interactive de jeux vidéo utilisant l'API IGDB, offrant une expérience immersive avec un design épuré et une navigation fluide.",
       longDescription: [
-        "Catalogue interactif de jeux vidéo avec des filtres avancés.",
-        "Pages produit détaillées présentant les caractéristiques des jeux.",
-        "Panier d’achat et système de commande intégrés.",
-        "Design immersif et responsive, optimisé pour les gamers.",
+        "Intégration de l'API IGDB pour une base de données riche et à jour",
+        "Système de filtrage avancé par catégories et plateformes",
+        "Barre de recherche dynamique avec suggestions",
+        "Panier d'achat interactif avec gestion des quantités",
+        "Pages de détails des jeux avec descriptions complètes",
+        "Interface responsive adaptée à tous les écrans",
       ],
       technologies: [
-        { name: "React", icon: "react.svg" },
+        { name: "React", icon: "react.png" },
         { name: "Vite", icon: "vite.svg" },
-        { name: "Tailwind", icon: "tailwind.svg" },
-        { name: "Firebase", icon: "firebase.svg" },
+        { name: "SCSS", icon: "sass.svg" },
+        { name: "IGDB API", icon: "igdb.svg" },
       ],
       links: {
         demo: "https://gamecenter96.vercel.app/",
-        github: "https://github.com/JustinDR96/game_center",
+        github: "https://github.com/JustinDR96/IGDB",
       },
     },
     Flexflix: {
@@ -53,8 +56,8 @@ export const ProjectDetails = () => {
         "Programme des séances en temps réel",
       ],
       technologies: [
-        { name: "React", icon: "react.svg" },
-        { name: "CSS", icon: "css.svg" },
+        { name: "React", icon: "react.png" },
+        { name: "CSS", icon: "css.png" },
         { name: "Vite", icon: "vite.svg" },
         { name: "TMDB API", icon: "tmdb.svg" },
       ],
@@ -71,14 +74,14 @@ export const ProjectDetails = () => {
         "Site vitrine élégant pour un restaurant gastronomique, mettant en valeur les plats et l'ambiance unique de l'établissement.",
       longDescription: [
         "Une présentation interactive du menu pour séduire les clients.",
-        "Une galerie photo mettant en avant la qualité des plats et l’atmosphère du restaurant.",
+        "Une galerie photo mettant en avant la qualité des plats et l'atmosphère du restaurant.",
         "Un système de réservation intégré et facile d'utilisation.",
         "Un design moderne, épuré et entièrement responsive pour une expérience optimale sur tous les appareils.",
       ],
       technologies: [
-        { name: "React", icon: "react.svg" },
+        { name: "React", icon: "react.png" },
         { name: "Vite", icon: "vite.svg" },
-        { name: "Tailwind", icon: "tailwind.svg" },
+        { name: "Tailwind", icon: "tailwind.png" },
       ],
       links: {
         demo: "https://le-gourmet.vercel.app/",
@@ -100,10 +103,10 @@ export const ProjectDetails = () => {
         "Statistiques détaillées de collection",
       ],
       technologies: [
-        { name: "React", icon: "react.svg" },
-        { name: "Node.js", icon: "nodejs.svg" },
+        { name: "React", icon: "react.png" },
+        { name: "Node.js", icon: "nodejs.webp" },
         { name: "Vite", icon: "vite.svg" },
-        { name: "Supabase", icon: "supabase.svg" },
+        { name: "Supabase", icon: "supabase_color.svg" },
       ],
       links: {
         demo: "https://tcg-pocket.vercel.app",
@@ -112,21 +115,24 @@ export const ProjectDetails = () => {
     },
     "gsap-react": {
       title: "GSAP Animations Showcase",
-      category: "Site de Démonstration / Animations",
+      category: "Animation / Démonstration",
       image: GSAP,
       description:
-        "Site de démonstration interactif mettant en valeur les animations fluides et dynamiques réalisées avec GSAP et React.",
+        "Une collection d'animations fluides et interactives réalisées avec GSAP et React, démontrant les possibilités créatives de l'animation web moderne.",
       longDescription: [
-        "Présentation d'animations créatives et immersives.",
-        "Transitions fluides entre les sections pour une expérience utilisateur engageante.",
-        "Exemples interactifs pour explorer les capacités de GSAP.",
-        "Design responsive adapté aux écrans mobiles et desktops.",
+        "Animations de défilement fluides avec ScrollTrigger",
+        "Transitions d'entrée et de sortie personnalisées",
+        "Animations de texte et d'images synchronisées",
+        "Effets de parallaxe sur le défilement",
+        "Animations de menu et de navigation interactives",
+        "Effets visuels réactifs aux actions utilisateur",
+        "Design minimaliste mettant en valeur les animations",
       ],
       technologies: [
-        { name: "React", icon: "react.svg" },
-        { name: "GSAP", icon: "gsap.svg" },
+        { name: "React", icon: "react.png" },
+        { name: "GSAP", icon: "gsap_icon.png" },
         { name: "Vite", icon: "vite.svg" },
-        { name: "Tailwind", icon: "tailwind.svg" },
+        { name: "CSS", icon: "css.png" },
       ],
       links: {
         demo: "https://gsap-react-eta.vercel.app/",
@@ -203,7 +209,11 @@ export const ProjectDetails = () => {
               <h3>Technologies utilisées</h3>
               <div className="tech-grid">
                 {project.technologies.map((tech, index) => (
-                  <div className="tech-item" key={index}>
+                  <div
+                    className="tech-item"
+                    key={index}
+                    data-tech={tech.name.toLowerCase()}
+                  >
                     <img src={`/icons/${tech.icon}`} alt={tech.name} />
                     <span>{tech.name}</span>
                   </div>
