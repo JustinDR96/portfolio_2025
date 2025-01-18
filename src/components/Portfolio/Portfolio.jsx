@@ -12,7 +12,7 @@ export const Portfolio = () => {
 
   const projects = [
     {
-      id: "game-store",
+      id: "gameCenter",
       title: "Site de vente de jeux vidéo",
       category: "E-commerce",
       image: Game_preview,
@@ -21,7 +21,7 @@ export const Portfolio = () => {
       size: "large",
     },
     {
-      id: "cinema",
+      id: "Flexflix",
       title: "Site pour un cinéma",
       category: "Site Vitrine",
       image: Flexflix,
@@ -76,11 +76,11 @@ export const Portfolio = () => {
             >
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
-                <div className="project-info">
-                  <span className="project-category">{project.category}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                </div>
+              </div>
+              <div className="project-info">
+                <span className="project-category">{project.category}</span>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
               </div>
             </div>
           ))}
