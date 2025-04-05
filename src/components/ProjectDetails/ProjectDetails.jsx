@@ -11,6 +11,7 @@ import sass_icon from "/icons/sass.svg";
 import vite_icon from "/icons/vite.svg";
 import tmdb_icon from "/icons/tmdb.svg";
 import igdb_icon from "/icons/igdb.svg";
+import TCG from "/projects/tcg_clone.png";
 
 export const ProjectDetails = () => {
   const { id } = useParams();
@@ -90,9 +91,9 @@ export const ProjectDetails = () => {
     },
 
     "tcg-pocket-clone": {
-      title: "TCG Pocket",
+      title: "TCG Clone",
       category: "Application Web / Gaming",
-      image: Fake_preview,
+      image: TCG,
       description:
         "Application web interactive permettant aux collectionneurs de cartes à jouer de gérer leur collection et de simuler l'ouverture de boosters.",
       longDescription: [
@@ -106,11 +107,11 @@ export const ProjectDetails = () => {
         { name: "React", icon: "react.png" },
         { name: "Node.js", icon: "nodejs.webp" },
         { name: "Vite", icon: "vite.svg" },
-        { name: "Supabase", icon: "supabase_color.svg" },
+        { name: "TCG DEX", icon: "tcg.svg" },
       ],
       links: {
-        demo: "https://tcg-pocket.vercel.app",
-        github: "https://github.com/JustinDR96/tcg-pocket",
+        demo: "https://tcg-clone.vercel.app/",
+        github: "https://github.com/JustinDR96/TCG-Clone",
       },
     },
     "gsap-react": {

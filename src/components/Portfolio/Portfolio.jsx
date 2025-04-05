@@ -4,6 +4,7 @@ import "./Portfolio.css";
 import Fake_preview from "/projects/fake.jpg";
 import Game_preview from "/projects/mobile.png";
 import Flexflix from "/projects/flexflix.png";
+import TCG from "/projects/tcg_clone.png";
 import GSAP from "/projects/gsap.png";
 import legourmet from "/projects/legourmet.png";
 
@@ -42,7 +43,7 @@ export const Portfolio = () => {
       id: "tcg-pocket-clone",
       title: "Projet TCG Pocket",
       category: "Application Web",
-      image: Fake_preview,
+      image: TCG,
       description:
         "Expérience immersive basée sur l'ouverture interactive de cartes.",
       size: "large",
