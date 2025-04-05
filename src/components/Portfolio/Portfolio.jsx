@@ -22,8 +22,8 @@ export const Portfolio = () => {
     },
     {
       id: "Flexflix",
-      title: "Site pour un cinéma",
-      category: "Site Vitrine",
+      title: "Site de streaming",
+      category: "Plateforme de Streaming",
       image: Flexflix,
       description:
         "Présentation d'événements et films avec système de réservation simple.",

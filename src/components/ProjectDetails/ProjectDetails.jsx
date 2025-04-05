@@ -44,7 +44,7 @@ export const ProjectDetails = () => {
     },
     Flexflix: {
       title: "FlexFlix Cinéma",
-      category: "Site Vitrine / Divertissement",
+      category: "Plateforme de Streaming / Cinéma",
       image: Flexflix,
       description:
         "Une plateforme moderne dédiée au cinéma, permettant aux utilisateurs de découvrir les dernières sorties, réserver leurs places et suivre l'actualité cinématographique.",
