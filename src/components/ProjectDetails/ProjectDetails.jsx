@@ -11,7 +11,9 @@ import sass_icon from "/icons/sass.svg";
 import vite_icon from "/icons/vite.svg";
 import tmdb_icon from "/icons/tmdb.svg";
 import igdb_icon from "/icons/igdb.svg";
+import fakeStore_icon from "/icons/fakestore.png";
 import TCG from "/projects/tcg_clone.png";
+import FakeStore from "/projects/e-shop.png";
 
 export const ProjectDetails = () => {
   const { id } = useParams();
@@ -114,6 +116,32 @@ export const ProjectDetails = () => {
         github: "https://github.com/JustinDR96/TCG-Clone",
       },
     },
+    "fake-store": {
+      title: "Fake Store",
+      category: "Site E-commerce / Vêtements",
+      image: FakeStore,
+      description:
+        "Une plateforme de vente en ligne moderne et réactive, offrant une expérience utilisateur fluide et intuitive.",
+      longDescription: [
+        "Intégration de l'API Fake Store pour un catalogue de produits varié",
+        "Système de filtrage par catégories et prix",
+        "Barre de recherche dynamique avec suggestions",
+        "Panier d'achat interactif avec gestion des quantités",
+        "Pages de détails des produits avec descriptions complètes",
+        "Interface responsive adaptée à tous les écrans",
+      ],
+      technologies: [
+        { name: "React", icon: "react.png" },
+        { name: "Vite", icon: "vite.svg" },
+        { name: "SCSS", icon: "sass.svg" },
+        { name: "FakeStore API", icon: "fakestore.png" },
+      ],
+      links: {
+        demo: "https://e-shop-one-kappa.vercel.app/",
+        github: "https://github.com/JustinDR96/E-shop/",
+      },
+    },
+
     "gsap-react": {
       title: "GSAP Animations Showcase",
       category: "Animation / Démonstration",

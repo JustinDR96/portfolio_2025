@@ -7,6 +7,7 @@ import Flexflix from "/projects/flexflix.png";
 import TCG from "/projects/tcg_clone.png";
 import GSAP from "/projects/gsap.png";
 import legourmet from "/projects/legourmet.png";
+import FakeStore from "/projects/e-shop.png";
 
 export const Portfolio = () => {
   const navigate = useNavigate();
@@ -47,6 +48,15 @@ export const Portfolio = () => {
       description:
         "Expérience immersive basée sur l'ouverture interactive de cartes.",
       size: "large",
+    },
+    {
+      id: "fake-store",
+      title: "Site e-commerce",
+      category: "E-commerce",
+      image: FakeStore,
+      description:
+        "Plateforme de vente en ligne avec un design moderne et une navigation intuitive.",
+      size: "wide",
     },
     {
       id: "gsap-react",
