@@ -15,13 +15,14 @@ export const Hero = () => {
       <div className="container hero-content">
         <div className="hero-text">
           <h1>
-            Je suis <span className="gradient-text">Justin</span>,
+            Je suis <span className="gradient-text">Justin.</span>
             <br />
-            Développeur Web.
+            Développeur Web créatif.
           </h1>
           <p className="hero-description">
-            Passionné par le codage et l&apos;innovation, je crée des sites
-            modernes et performants pour répondre à vos besoins.
+            Un site, ce n’est pas juste du code. C’est une ambiance, une
+            sensation, une histoire à raconter. Moi, je m’occupe de la rendre
+            inoubliable.
           </p>
           <div className="hero-buttons">
             <button
@@ -49,13 +50,13 @@ export const Hero = () => {
               <div className="header-line" />
             </div>
             <p>
-              Développeur web passionné, j&apos;aime relever des défis
-              techniques et explorer de nouvelles technologies. Mon parcours
-              chez BeCode, suivi d&apos;une expérience en start-up, m&apos;a
-              permis de travailler sur des projets variés, où créativité et
-              rigueur sont essentielles. Toujours curieux, j&apos;expérimente
-              également dans le domaine de l&apos;intelligence artificielle pour
-              offrir des solutions innovantes et adaptées à chaque besoin.
+              Développeur web passionné, je transforme les idées en expériences
+              interactives, claires et efficaces. Formé chez BeCode, puis plongé
+              dans le rythme intense d’une start-up, j’ai appris à coder vite,
+              bien… et avec style. Curieux de nature, je teste, j’explore, je
+              bricole avec les nouvelles technos, surtout quand il s’agit d’IA.
+              Ce qui me motive ? Trouver des solutions simples, élégantes et
+              bien pensées — pour des sites qui fonctionnent, vraiment.
             </p>
           </div>
         </div>

@@ -4,30 +4,35 @@ import "./Experience.css";
 export const Experience = () => {
   const skills = [
     {
-      category: "Langages et Frameworks",
+      category: "Langages & Frameworks",
       items: [
-        { name: "HTML", icon: "/icons/html.svg" },
-        { name: "CSS/SCSS", icon: "/icons/css.svg" },
-        { name: "Bootstrap", icon: "/icons/bootstrap.svg" },
-        { name: "JavaScript", icon: "/icons/javascript.svg" },
+        { name: "HTML5", icon: "/icons/html.svg" },
+        { name: "CSS3 / SCSS", icon: "/icons/css.svg" },
+        { name: "JavaScript (ES6+)", icon: "/icons/javascript.svg" },
         { name: "React", icon: "/icons/react.svg" },
+        { name: "Vite", icon: "/icons/vite.svg" },
+        { name: "GSAP", icon: "/icons/gsap_icon.png" },
         { name: "Next.js", icon: "/icons/nextjs.svg" },
       ],
     },
     {
-      category: "Bases de données",
-      items: [
-        { name: "MongoDB", icon: "/icons/mongodb.svg" },
-        { name: "Firebase", icon: "/icons/firebase.svg" },
-        { name: "Supabase", icon: "/icons/supabase.svg" },
-      ],
-    },
-    {
-      category: "Autres compétences",
+      category: "Outils & Environnement",
       items: [
         { name: "Git", icon: "/icons/git.svg" },
         { name: "GitHub", icon: "/icons/github.svg" },
         { name: "Figma", icon: "/icons/figma.svg" },
+        { name: "Visual Studio Code", icon: "/icons/vscode.svg" },
+      ],
+    },
+    {
+      category: "APIs & BDD",
+      items: [
+        { name: "Firebase", icon: "/icons/firebase.svg" },
+        { name: "IGDB API", icon: "/icons/igdb.svg" },
+        { name: "TMDB API", icon: "/icons/tmdb.svg" },
+        { name: "Fake Store API", icon: "/icons/fakestore.png" },
+        { name: "MongoDB", icon: "/icons/mongodb.svg" },
+        { name: "Supabase", icon: "/icons/supabase.svg" },
       ],
     },
   ];

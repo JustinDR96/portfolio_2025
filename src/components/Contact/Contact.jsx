@@ -75,7 +75,7 @@ export const Contact = () => {
                   </div>
                   <div className="item-content">
                     <h5>Email</h5>
-                    <a href="mailto:contact@example.com">
+                    <a href="mailto:justinderoover@gmail.com">
                       justinderoover@gmail.com
                     </a>
                   </div>
@@ -98,12 +98,16 @@ export const Contact = () => {
                   <a
                     href="https://github.com/JustinDR96"
                     className="social-icon"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className="fab fa-github" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/derooverjustin/"
                     className="social-icon"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className="fab fa-linkedin" />
                   </a>
@@ -180,8 +184,8 @@ export const Contact = () => {
                 </div>
                 <h3>Message envoyé avec succès !</h3>
                 <p>
-                  Merci de m'avoir contacté. Je vous répondrai dans les plus
-                  brefs délais.
+                  Merci de m&apos;avoir contacté. Je vous répondrai dans les
+                  plus brefs délais.
                 </p>
               </div>
             )}

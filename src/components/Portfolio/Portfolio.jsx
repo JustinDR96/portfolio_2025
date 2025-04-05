@@ -1,13 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Portfolio.css";
-import Fake_preview from "/projects/fake.jpg";
-import Game_preview from "/projects/mobile.png";
-import Flexflix from "/projects/flexflix.png";
-import TCG from "/projects/tcg_clone.png";
-import GSAP from "/projects/gsap.png";
-import legourmet from "/projects/legourmet.png";
-import FakeStore from "/projects/e-shop.png";
+import Flexflix from "/projects/plex.png";
+import TCG from "/projects/tcg.png";
+import GSAP from "/projects/gsap_1.png";
+import legourmet from "/projects/legourmet_1.png";
+import FakeStore from "/projects/eshop.png";
+import Igdb from "/projects/igdb.png";
 
 export const Portfolio = () => {
   const navigate = useNavigate();
@@ -17,7 +16,7 @@ export const Portfolio = () => {
       id: "gameCenter",
       title: "Site de vente de jeux vidéo",
       category: "E-commerce",
-      image: Game_preview,
+      image: Igdb,
       description:
         "Plateforme e-commerce avec navigation fluide et design épuré.",
       size: "large",

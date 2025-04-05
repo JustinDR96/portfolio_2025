@@ -1,54 +1,131 @@
-import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./ProjectDetails.css";
-import Fake_preview from "/projects/fake.jpg";
-import Game_preview from "/projects/mobile.png";
-import Flexflix from "/projects/flexflix.png";
-import GSAP from "/projects/gsap.png";
-import gsap_icon from "/icons/gsap_icon.png";
-import legourmet from "/projects/legourmet.png";
-import sass_icon from "/icons/sass.svg";
-import vite_icon from "/icons/vite.svg";
-import tmdb_icon from "/icons/tmdb.svg";
-import igdb_icon from "/icons/igdb.svg";
-import fakeStore_icon from "/icons/fakestore.png";
-import TCG from "/projects/tcg_clone.png";
-import FakeStore from "/projects/e-shop.png";
+import mockupIGDB from "/projects/macbook_igdb.png";
+import mockupFlexflix from "/projects/macbook_flexflix.png";
+import mockupLegourmet from "/projects/macbook_legourmet.png";
+import mockupTcg from "/projects/macbook_tcg.png";
+import mockupEshop from "/projects/macbook_eshop.png";
+import mockupGsap from "/projects/macbook_gsap.png";
+import iphoneIgdb from "/projects/iphone_igdb.png";
+import ipadIgdb from "/projects/ipad_igdb.png";
+import iphoneFlexflix from "/projects/iphone_flexflix.png";
+import ipadFlexflix from "/projects/ipad_flexflix.png";
+import iphoneLegourmet from "/projects/iphone_legourmet.png";
+import ipadLegourmet from "/projects/ipad_legourmet.png";
+import iphoneTcg from "/projects/iphone_tcg.png";
+import ipadTcg from "/projects/ipad_tcg.png";
+import iphoneEshop from "/projects/iphone_eshop.png";
+import ipadEshop from "/projects/ipad_eshop.png";
+import iphoneGsap from "/projects/iphone_gsap.png";
+import ipadGsap from "/projects/ipad_gsap.png";
 
 export const ProjectDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [deviceType, setDeviceType] = useState("desktop");
+
+  useEffect(() => {
+    // Fonction pour détecter le type d'appareil
+    const checkDeviceType = () => {
+      const width = window.innerWidth;
+      if (width <= 480) {
+        setDeviceType("mobile");
+      } else if (width <= 992) {
+        setDeviceType("tablet");
+      } else {
+        setDeviceType("desktop");
+      }
+    };
+
+    // Vérifier au chargement
+    checkDeviceType();
+
+    // Ajouter un écouteur d'événement pour le redimensionnement
+    window.addEventListener("resize", checkDeviceType);
+
+    // Nettoyer l'écouteur lors du démontage
+    return () => {
+      window.removeEventListener("resize", checkDeviceType);
+    };
+  }, []);
+
+  // Fonction pour déterminer quelle image afficher
+  const getProjectImage = (projectId) => {
+    // Pour tous les projets, on définit une stratégie d'affichage responsive
+    if (deviceType === "mobile") {
+      // Pour IGDB, on a une image spécifique
+      if (projectId === "gameCenter") return iphoneIgdb;
+      if (projectId === "Flexflix") return iphoneFlexflix;
+      if (projectId === "legourmet") return iphoneLegourmet;
+      if (projectId === "tcg-pocket-clone") return iphoneTcg;
+      if (projectId === "fake-store") return iphoneEshop;
+      if (projectId === "gsap-react") return iphoneGsap;
+      // Pour les autres projets, on pourrait ajouter d'autres images iPhone ici
+      // Exemple:
+    }
+
+    if (deviceType === "tablet") {
+      // Pour IGDB, on a une image spécifique
+      if (projectId === "gameCenter") return ipadIgdb;
+      if (projectId === "Flexflix") return ipadFlexflix;
+      if (projectId === "legourmet") return ipadLegourmet;
+      if (projectId === "tcg-pocket-clone") return ipadTcg;
+      if (projectId === "fake-store") return ipadEshop;
+      if (projectId === "gsap-react") return ipadGsap;
+      // Pour les autres projets, on pourrait ajouter d'autres images iPad ici
+      // Exemple: if (projectId === "Flexflix") return ipadFlexflix;
+    }
+
+    // Version desktop (ou fallback si pas d'image mobile/tablet spécifique)
+    switch (projectId) {
+      case "gameCenter":
+        return mockupIGDB;
+      case "Flexflix":
+        return mockupFlexflix;
+      case "legourmet":
+        return mockupLegourmet;
+      case "tcg-pocket-clone":
+        return mockupTcg;
+      case "fake-store":
+        return mockupEshop;
+      case "gsap-react":
+        return mockupGsap;
+      default:
+        return mockupIGDB;
+    }
+  };
 
   const projectsData = {
     gameCenter: {
       title: "Game Center",
       category: "Site E-commerce / Gaming",
-      image: Game_preview,
+      image: getProjectImage("gameCenter"),
       description:
-        "Une plateforme interactive de jeux vidéo utilisant l'API IGDB, offrant une expérience immersive avec un design épuré et une navigation fluide.",
+        "Plateforme de jeux vidéo avec moteur de recherche performant et navigation pensée pour les gamers.",
       longDescription: [
-        "Intégration de l'API IGDB pour une base de données riche et à jour",
-        "Système de filtrage avancé par catégories et plateformes",
-        "Barre de recherche dynamique avec suggestions",
+        "Intégration de l'API RAWG pour récupérer une base de données complète de jeux vidéo",
+        "Filtrage dynamique par genre, plateforme et éditeur",
+        "Recherche instantanée avec suggestions en temps réel",
+        "Pages jeux détaillées avec visuels, description, notes et dates de sortie",
         "Panier d'achat interactif avec gestion des quantités",
-        "Pages de détails des jeux avec descriptions complètes",
-        "Interface responsive adaptée à tous les écrans",
+        "Interface responsive et design fluide adapté à tous les écrans",
       ],
       technologies: [
         { name: "React", icon: "react.png" },
         { name: "Vite", icon: "vite.svg" },
         { name: "SCSS", icon: "sass.svg" },
-        { name: "IGDB API", icon: "igdb.svg" },
+        { name: "RAWG API", icon: "rawg.png" }, // crée une icône si besoin
       ],
       links: {
         demo: "https://gamecenter96.vercel.app/",
-        github: "https://github.com/JustinDR96/IGDB",
+        github: "https://github.com/JustinDR96/IGDB", // renommer le repo si tu veux être cohérent avec RAWG
       },
     },
     Flexflix: {
       title: "FlexFlix Cinéma",
       category: "Plateforme de Streaming / Cinéma",
-      image: Flexflix,
+      image: getProjectImage("Flexflix"),
       description:
         "Une plateforme moderne dédiée au cinéma, permettant aux utilisateurs de découvrir les dernières sorties, réserver leurs places et suivre l'actualité cinématographique.",
       longDescription: [
@@ -72,7 +149,7 @@ export const ProjectDetails = () => {
     legourmet: {
       title: "Restaurant Le Gourmet",
       category: "Site Vitrine / Restauration",
-      image: legourmet,
+      image: getProjectImage("legourmet"),
       description:
         "Site vitrine élégant pour un restaurant gastronomique, mettant en valeur les plats et l'ambiance unique de l'établissement.",
       longDescription: [
@@ -95,7 +172,7 @@ export const ProjectDetails = () => {
     "tcg-pocket-clone": {
       title: "TCG Clone",
       category: "Application Web / Gaming",
-      image: TCG,
+      image: getProjectImage("tcg-pocket-clone"),
       description:
         "Application web interactive permettant aux collectionneurs de cartes à jouer de gérer leur collection et de simuler l'ouverture de boosters.",
       longDescription: [
@@ -119,7 +196,7 @@ export const ProjectDetails = () => {
     "fake-store": {
       title: "Fake Store",
       category: "Site E-commerce / Vêtements",
-      image: FakeStore,
+      image: getProjectImage("fake-store"),
       description:
         "Une plateforme de vente en ligne moderne et réactive, offrant une expérience utilisateur fluide et intuitive.",
       longDescription: [
@@ -145,7 +222,7 @@ export const ProjectDetails = () => {
     "gsap-react": {
       title: "GSAP Animations Showcase",
       category: "Animation / Démonstration",
-      image: GSAP,
+      image: getProjectImage("gsap-react"),
       description:
         "Une collection d'animations fluides et interactives réalisées avec GSAP et React, démontrant les possibilités créatives de l'animation web moderne.",
       longDescription: [
@@ -191,8 +268,16 @@ export const ProjectDetails = () => {
 
         <div className="project-details-wrapper">
           <div className="project-preview">
-            <div className="project-image">
-              <img src={project.image} alt={project.title} />
+            <div
+              className={`project-image ${
+                deviceType !== "desktop" ? `project-image-${deviceType}` : ""
+              }`}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className={deviceType !== "desktop" ? `img-${deviceType}` : ""}
+              />
             </div>
             <div className="project-links">
               <a

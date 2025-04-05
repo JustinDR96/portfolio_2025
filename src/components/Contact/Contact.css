@@ -180,6 +180,10 @@
   transition: var(--transition);
 }
 
+.form-group textarea {
+  min-height: 200px;
+  resize: none;
+}
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -224,6 +228,11 @@
 
   .contact-info {
     border-radius: 20px 20px 0 0;
+    padding: 2.5rem;
+  }
+
+  .contact-form {
+    padding: 2.5rem;
   }
 }
 
@@ -242,6 +251,116 @@
 
   .contact-wrapper {
     margin: 0 1rem;
+  }
+
+  .contact-content {
+    padding: 0 1rem;
+  }
+
+  .contact {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-info {
+    padding: 2rem;
+  }
+
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .info-items {
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+  }
+
+  .contact-wrapper {
+    margin: 0;
+    border-radius: 15px;
+  }
+
+  .success-message {
+    padding: 2rem;
+    min-height: 350px;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .contact-info,
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .info-header h4 {
+    font-size: 1.3rem;
+  }
+
+  .info-header p {
+    font-size: 0.9rem;
+  }
+
+  .form-header h4 {
+    font-size: 1.3rem;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-item {
+    gap: 0.7rem;
+  }
+
+  .icon-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+
+  .item-content h5 {
+    font-size: 0.9rem;
+  }
+
+  .item-content a,
+  .item-content span {
+    font-size: 0.8rem;
+  }
+
+  .success-message {
+    padding: 1.5rem;
+    min-height: 300px;
+  }
+
+  .success-message h3 {
+    font-size: 1.3rem;
+  }
+
+  .success-message p {
+    font-size: 0.9rem;
   }
 }
 
@@ -294,5 +413,12 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-info,
+  .contact-form {
+    padding: 0.5rem;
   }
 }
