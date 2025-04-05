@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import Profil_picture from "/images/photo_profil.jpg";
+import Profil_picture from "/images/justin-dev.png";
 
 export const Hero = () => {
   const scrollToSection = (sectionId) => {

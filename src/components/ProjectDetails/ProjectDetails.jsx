@@ -62,8 +62,8 @@ export const ProjectDetails = () => {
         { name: "TMDB API", icon: "tmdb.svg" },
       ],
       links: {
-        demo: "https://flexflix-demo.vercel.app",
-        github: "https://github.com/username/flexflix",
+        demo: "https://plex-clone-iota.vercel.app/",
+        github: "https://github.com/JustinDR96/plex_clone",
       },
     },
     legourmet: {
