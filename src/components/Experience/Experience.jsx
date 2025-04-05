@@ -6,33 +6,35 @@ export const Experience = () => {
     {
       category: "Langages & Frameworks",
       items: [
-        { name: "HTML5", icon: "/icons/html.svg" },
-        { name: "CSS3 / SCSS", icon: "/icons/css.svg" },
-        { name: "JavaScript (ES6+)", icon: "/icons/javascript.svg" },
-        { name: "React", icon: "/icons/react.svg" },
-        { name: "Vite", icon: "/icons/vite.svg" },
-        { name: "GSAP", icon: "/icons/gsap_icon.png" },
+        { name: "HTML5", icon: "/icons/html.png" },
+        { name: "CSS3 / SCSS", icon: "/icons/css3.png" },
+        { name: "Sass", icon: "/icons/sass.png" },
+        { name: "JavaScript (ES6+)", icon: "/icons/js.png" },
+        { name: "React", icon: "/icons/react_1.png" },
         { name: "Next.js", icon: "/icons/nextjs.svg" },
+
+        { name: "GSAP", icon: "/icons/gsap_icon.png" },
       ],
     },
     {
       category: "Outils & Environnement",
       items: [
-        { name: "Git", icon: "/icons/git.svg" },
-        { name: "GitHub", icon: "/icons/github.svg" },
-        { name: "Figma", icon: "/icons/figma.svg" },
-        { name: "Visual Studio Code", icon: "/icons/vscode.svg" },
+        { name: "Git", icon: "/icons/git.png" },
+        { name: "GitHub", icon: "/icons/github_1.png" },
+        { name: "Figma", icon: "/icons/figma.webp" },
+        { name: "Visual Studio Code", icon: "/icons/vscode.png" },
+        { name: "Vite", icon: "/icons/vite.svg" },
       ],
     },
     {
       category: "APIs & BDD",
       items: [
-        { name: "Firebase", icon: "/icons/firebase.svg" },
+        { name: "Firebase", icon: "/icons/firebase.png" },
+        { name: "MongoDB", icon: "/icons/mongodb.png" },
+        { name: "Supabase", icon: "/icons/supabase.png" },
         { name: "IGDB API", icon: "/icons/igdb.svg" },
         { name: "TMDB API", icon: "/icons/tmdb.svg" },
         { name: "Fake Store API", icon: "/icons/fakestore.png" },
-        { name: "MongoDB", icon: "/icons/mongodb.svg" },
-        { name: "Supabase", icon: "/icons/supabase.svg" },
       ],
     },
   ];
@@ -58,7 +60,7 @@ export const Experience = () => {
                         style={{
                           width: "24px",
                           height: "24px",
-                          filter: "brightness(0) invert(1)",
+                          // filter: "brightness(0) invert(1)",
                         }}
                       />
                     </div>

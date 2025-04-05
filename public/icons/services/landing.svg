@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a36e0" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Document/Page -->
+  <rect x="25" y="15" width="50" height="70" rx="4" stroke="url(#gradient)" stroke-width="2.5" fill="none" />
+  
+  <!-- Header de la landing page -->
+  <rect x="25" y="15" width="50" height="15" rx="4" fill="url(#gradient)" opacity="0.2" />
+  
+  <!-- Contenu principal -->
+  <rect x="32" y="38" width="36" height="6" rx="2" fill="url(#gradient)" opacity="0.3" />
+  <rect x="32" y="48" width="28" height="4" rx="1" fill="url(#gradient)" opacity="0.2" />
+  <rect x="32" y="56" width="36" height="4" rx="1" fill="url(#gradient)" opacity="0.15" />
+  
+  <!-- Call to Action -->
+  <rect x="38" y="68" width="24" height="8" rx="4" fill="url(#gradient)" />
+  
+  <!-- Cible/Target -->
+  <circle cx="75" cy="30" r="15" stroke="url(#gradient)" stroke-width="2.5" fill="none" />
+  <circle cx="75" cy="30" r="10" stroke="url(#gradient)" stroke-width="2" fill="none" />
+  <circle cx="75" cy="30" r="5" stroke="url(#gradient)" stroke-width="1.5" fill="url(#gradient)" opacity="0.5" />
+  
+  <!-- Flèche -->
+  <path d="M73 20 L77 16 L77 24 Z" fill="url(#gradient)" />
+  <line x1="77" y1="20" x2="82" y2="20" stroke="url(#gradient)" stroke-width="2" />
+</svg> 

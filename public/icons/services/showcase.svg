@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a36e0" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Écran d'ordinateur -->
+  <rect x="15" y="15" width="70" height="50" rx="4" stroke="url(#gradient)" stroke-width="3" fill="none" />
+  
+  <!-- Barre de navigation -->
+  <rect x="20" y="22" width="60" height="8" rx="2" fill="url(#gradient)" opacity="0.3" />
+  
+  <!-- Contenu du site -->
+  <rect x="20" y="35" width="25" height="22" rx="2" fill="url(#gradient)" opacity="0.2" />
+  <rect x="50" y="35" width="30" height="8" rx="2" fill="url(#gradient)" opacity="0.3" />
+  <rect x="50" y="48" width="30" height="4" rx="1" fill="url(#gradient)" opacity="0.2" />
+  <rect x="50" y="55" width="20" height="4" rx="1" fill="url(#gradient)" opacity="0.2" />
+  
+  <!-- Pied de l'écran -->
+  <path d="M45 65 L40 75 L60 75 L55 65" stroke="url(#gradient)" stroke-width="3" fill="none" />
+  
+  <!-- Base -->
+  <rect x="35" y="75" width="30" height="5" rx="2" stroke="url(#gradient)" stroke-width="2.5" fill="none" />
+</svg> 

@@ -70,11 +70,6 @@
   background: rgba(59, 130, 246, 0.1);
 }
 
-.skill-item:hover img {
-  filter: brightness(0) saturate(100%) invert(48%) sepia(85%) saturate(2476%)
-    hue-rotate(205deg) brightness(97%) contrast(95%) !important;
-}
-
 .skill-item span {
   color: var(--text-secondary);
   font-size: 1rem;

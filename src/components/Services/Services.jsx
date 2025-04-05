@@ -6,23 +6,23 @@ export const Services = () => {
     {
       id: 1,
       title: "Sites Vitrines",
-      icon: "🌐",
+      icon: "/icons/services/showcase.svg",
       description:
-        "Création de sites vitrines pour mettre en valeur votre activité.",
+        "Création de sites vitrines élégants et performants pour mettre en valeur votre activité avec impact.",
     },
     {
       id: 2,
       title: "E-commerce",
-      icon: "🛍️",
+      icon: "/icons/services/ecommerce.svg",
       description:
-        "Développement de sites e-commerce pour booster vos ventes en ligne.",
+        "Développement de boutiques en ligne sur mesure pour booster vos ventes et offrir une expérience client optimale.",
     },
     {
       id: 3,
       title: "Landing Pages",
-      icon: "🎯",
+      icon: "/icons/services/landing.svg",
       description:
-        "Conception de landing pages optimisées pour transformer vos visiteurs en clients.",
+        "Conception de landing pages stratégiques et optimisées pour convertir vos visiteurs en clients et maximiser vos conversions.",
     },
   ];
 
@@ -36,7 +36,9 @@ export const Services = () => {
         <div className="services-grid">
           {services.map((service) => (
             <div className="service-card" key={service.id}>
-              <div className="service-icon">{service.icon}</div>
+              <div className="service-icon">
+                <img src={service.icon} alt={service.title} />
+              </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>

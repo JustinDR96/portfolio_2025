@@ -39,14 +39,21 @@
 .service-icon {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  background: linear-gradient(
-    to right,
-    var(--accent-blue),
-    var(--accent-purple)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.service-icon img {
+  width: 64px;
+  height: 64px;
+  transition: var(--transition);
+  filter: none;
+}
+
+.service-card:hover .service-icon img {
+  transform: scale(1.1);
 }
 
 .service-card h3 {

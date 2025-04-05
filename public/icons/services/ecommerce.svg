@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a36e0" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Panier -->
+  <path d="M30 35 H75 L68 60 H35 L30 35 Z" stroke="url(#gradient)" stroke-width="3" fill="none" />
+  
+  <!-- Poignée du panier -->
+  <path d="M40 35 C40 25 50 20 55 30" stroke="url(#gradient)" stroke-width="3" fill="none" />
+  
+  <!-- Roues du panier -->
+  <circle cx="40" cy="70" r="5" stroke="url(#gradient)" stroke-width="2" fill="none" />
+  <circle cx="62" cy="70" r="5" stroke="url(#gradient)" stroke-width="2" fill="none" />
+  
+  <!-- Connexion du panier aux roues -->
+  <line x1="35" y1="60" x2="40" y2="65" stroke="url(#gradient)" stroke-width="2" />
+  <line x1="68" y1="60" x2="62" y2="65" stroke="url(#gradient)" stroke-width="2" />
+  
+  <!-- Articles dans le panier -->
+  <rect x="40" y="42" width="8" height="10" rx="1" fill="url(#gradient)" opacity="0.2" />
+  <rect x="52" y="40" width="10" height="12" rx="1" fill="url(#gradient)" opacity="0.3" />
+  <rect x="65" y="43" width="6" height="8" rx="1" fill="url(#gradient)" opacity="0.2" />
+  
+  <!-- Symbole € -->
+  <text x="20" y="50" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#gradient)">€</text>
+</svg> 
