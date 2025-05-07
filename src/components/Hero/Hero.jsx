@@ -1,6 +1,6 @@
 import React, { useCallback, memo } from "react";
 import "./Hero.css";
-import Profil_picture from "/images/justin-dev.png";
+import Profil_picture from "/images/photo_profil.jpg";
 
 export const Hero = memo(() => {
   const scrollToSection = useCallback((sectionId) => {
