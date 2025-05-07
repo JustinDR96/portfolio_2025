@@ -19,6 +19,9 @@ import iphoneEshop from "/projects/iphone_eshop.png";
 import ipadEshop from "/projects/ipad_eshop.png";
 import iphoneGsap from "/projects/iphone_gsap.png";
 import ipadGsap from "/projects/ipad_gsap.png";
+import iphoneLanding from "/projects/iphone_landing.png";
+import ipadLanding from "/projects/ipad_landing.png";
+import mockupLanding from "/projects/macbook_landing.png";
 
 export const ProjectDetails = () => {
   const { id } = useParams();
@@ -61,6 +64,7 @@ export const ProjectDetails = () => {
       if (projectId === "tcg-pocket-clone") return iphoneTcg;
       if (projectId === "fake-store") return iphoneEshop;
       if (projectId === "gsap-react") return iphoneGsap;
+      if (projectId === "landingPage") return iphoneLanding;
       // Pour les autres projets, on pourrait ajouter d'autres images iPhone ici
       // Exemple:
     }
@@ -73,6 +77,7 @@ export const ProjectDetails = () => {
       if (projectId === "tcg-pocket-clone") return ipadTcg;
       if (projectId === "fake-store") return ipadEshop;
       if (projectId === "gsap-react") return ipadGsap;
+      if (projectId === "landingPage") return ipadLanding;
       // Pour les autres projets, on pourrait ajouter d'autres images iPad ici
       // Exemple: if (projectId === "Flexflix") return ipadFlexflix;
     }
@@ -91,6 +96,8 @@ export const ProjectDetails = () => {
         return mockupEshop;
       case "gsap-react":
         return mockupGsap;
+      case "landingPage":
+        return mockupLanding;
       default:
         return mockupIGDB;
     }
@@ -120,6 +127,26 @@ export const ProjectDetails = () => {
       links: {
         demo: "https://gamecenter96.vercel.app/",
         github: "https://github.com/JustinDR96/IGDB", // renommer le repo si tu veux être cohérent avec RAWG
+      },
+    },
+    landingPage: {
+      title: "Landing Page",
+      category: "Site Vitrine / Landing Page",
+      image: getProjectImage("landingPage"),
+      description:
+        "Une landing page moderne et réactive, conçue pour captiver les visiteurs et les inciter à s'inscrire.",
+      longDescription: [
+        "Design épuré et moderne, optimisé pour la conversion",
+        "Formulaire d'inscription interactif et dynamique",
+      ],
+      technologies: [
+        { name: "HTML", icon: "html.png" },
+        { name: "CSS", icon: "css.png" },
+        { name: "JavaScript", icon: "js.png" },
+      ],
+      links: {
+        demo: "https://landing-page-puce-sigma-76.vercel.app/",
+        github: "https://github.com/JustinDR96/LandingPage",
       },
     },
     Flexflix: {

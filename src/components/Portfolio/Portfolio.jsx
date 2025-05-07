@@ -7,6 +7,7 @@ import GSAP from "/projects/gsap_1.png";
 import legourmet from "/projects/legourmet_1.png";
 import FakeStore from "/projects/eshop.png";
 import Igdb from "/projects/igdb.png";
+import Landing from "/projects/landing.png";
 
 export const Portfolio = memo(() => {
   const navigate = useNavigate();
@@ -21,6 +22,14 @@ export const Portfolio = memo(() => {
         description:
           "Plateforme e-commerce avec navigation fluide et design épuré.",
         size: "large",
+      },
+      {
+        id: "landingPage",
+        title: "Landing Page",
+        category: "Site Vitrine / Landing Page",
+        image: Landing,
+        description: "Landing Page moderne, réactive et responsive.",
+        size: "wide",
       },
       {
         id: "Flexflix",
